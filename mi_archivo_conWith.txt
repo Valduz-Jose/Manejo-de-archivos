@@ -1,0 +1,2 @@
+Hola, este es mi primer archivo en python.
+Estoy aprendiendo a trabajar con archivos.

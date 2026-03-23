@@ -1,6 +1,6 @@
 import os
 
-from maquina_snacks_proyecto.snack import Snack
+from snack import Snack
 
 
 class ServicioSnacks:
@@ -30,7 +30,7 @@ class ServicioSnacks:
         try:
             with open(self.NOMBRE_ARCHIVO, 'a') as archivo:
                 for snack in snacks:
-                    archivo.write(f'{snack.escribir_snack()}\n')
+                    archivo.write(snack.escribir_snack())
         except Exception as e:
             print(f"Error al guardar snacks: {e}")
 
@@ -41,6 +41,7 @@ class ServicioSnacks:
                 for linea in archivo:
                     id_snack,nombre,precio = linea.strip().split(',')
                     snack = Snack(nombre, float(precio))
+                    snack.id_snack = int(id_snack)  # Asignar el ID del snack
                     snacks.append(snack)
         except Exception as e:
             print(f"Error al obtener snacks: {e}")

@@ -1,0 +1,6 @@
+1,Papas fritas,1.5
+2,Galletas,1.0
+3,Chocolates,2.0
+4,Refrescos,1.25
+5,Coca Cola,5.8
+6,Coca Cola,8.7
